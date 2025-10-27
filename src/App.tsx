@@ -103,21 +103,18 @@ function App() {
       <h1>JobTrack System</h1>
 
       <form onSubmit={handleAdicionarCandidatura}>
-        {/* <label htmlFor="tituloVaga">Título da vaga</label> */}
         <input
           type="text"
           placeholder="Título da vaga"
           value={tituloVaga}
           onChange={(evento) => setTituloVaga(evento.target.value)}
         />
-        {/* <label htmlFor="empresa">Nome da empresa</label> */}
         <input
           type="text"
           placeholder="Nome da empresa"
           value={empresa}
           onChange={(evento) => setEmpresa(evento.target.value)}
         />
-        {/* <label htmlFor="statusCandidatura">Status da candidatura: </label> */}
         <Select
           value={statusCandidatura}
           onChange={handleStatusChange}
