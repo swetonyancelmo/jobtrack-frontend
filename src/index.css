@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-/* React Select Custom Styles */
 .react-select-container {
   font-size: 0.95rem;
 }
@@ -72,7 +71,6 @@
   background-color: #4f46e5 !important;
 }
 
-/* Animations */
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -88,7 +86,6 @@
   animation: fade-in 0.3s ease-out;
 }
 
-/* Smooth scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
