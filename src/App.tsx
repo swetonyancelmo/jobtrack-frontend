@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import Select from 'react-select'
+import CandidaturaItem from "./components/CandidaturaItem";
 
 interface IOption {
   value: string;
@@ -7,7 +8,7 @@ interface IOption {
 }
 
 interface ICandidatura {
-  id: string,
+  id: number,
   tituloVaga: string,
   empresa: string,
   statusCandidatura: string
@@ -81,6 +82,22 @@ function App() {
     }
   }
 
+  const handleDeletarCandidatura = async (id:number) => {
+    try {
+      const resposta = await fetch(`http://localhost:8080/api/candidaturas/${id}`, {
+        method: 'DELETE',
+      });
+
+      if(!resposta.ok && resposta.status !== 204){
+        throw new Error('Erro ao deletar tarefa');
+      }
+
+      setCandidatura(candidaturas.filter(candidatura => candidatura.id !== id));
+    } catch(error){
+      console.error('Erro ao deletar candidatura: ', error);
+    }
+  }
+
   return (
     <div>
       <h1>JobTrack System</h1>
@@ -115,11 +132,13 @@ function App() {
       </form>
 
       <ul>
-        {
-          candidaturas.map(candidatura => (
-            <li key={candidatura.id}>{candidatura.tituloVaga} - {candidatura.empresa} - {candidatura.statusCandidatura}</li>
-          ))
-        }
+        {candidaturas.map(candidatura => (
+          <CandidaturaItem 
+            key={candidatura.id}
+            candidatura={candidatura}
+            onDelete={handleDeletarCandidatura}
+          />
+        ))}
       </ul>
     </div>
   )
