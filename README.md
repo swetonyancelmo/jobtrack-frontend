@@ -300,27 +300,6 @@ A aplicação é totalmente responsiva:
 - **Tablet**: Adaptação automática do grid
 - **Mobile**: Cards empilhados verticais
 
----
-
-## 🎯 Roadmap e Melhorias Futuras
-
-### Funcionalidades Planejadas
-- [ ] Edição de candidaturas existentes
-- [ ] Filtros por status
-- [ ] Busca por empresa ou vaga
-- [ ] Ordenação de lista
-- [ ] Estatísticas e dashboard
-- [ ] Exportação para CSV/PDF
-- [ ] Notas e observações
-- [ ] Adicionar datas (candidatura, entrevista, etc)
-- [ ] Dark mode
-
-### Melhorias Técnicas
-- [ ] Testes unitários (Vitest)
-- [ ] Testes E2E (Playwright)
-- [ ] Internacionalização (i18n)
-- [ ] PWA Support
-- [ ] Otimizações de performance
 
 ---
 
@@ -344,16 +323,7 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 
 ## 👨‍💼 Autor
 
-Desenvolvido com ❤️ para facilitar o gerenciamento de candidaturas de emprego.
-
----
-
-## 🙏 Agradecimentos
-
-- [React](https://reactjs.org/) pela incrível biblioteca
-- [Tailwind CSS](https://tailwindcss.com/) pelo framework de estilos
-- [Vite](https://vitejs.dev/) pela performance excepcional
-- [TypeScript](https://www.typescriptlang.org/) pela segurança de tipos
+Desenvolvido por Swetony Ancelmo com ❤️ para facilitar o gerenciamento de candidaturas de emprego.
 
 ---
 
